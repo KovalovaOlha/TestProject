@@ -72,15 +72,9 @@
     </dependencies>
     <profiles>
         <profile>
-            <id>SEOStatusCode</id>
+            <id>Tests</id>
             <properties>
-                <xml.files>src/test/resources/SEOStatusCode.xml</xml.files>
-            </properties>
-        </profile>
-        <profile>
-            <id>CompaniesStCode</id>
-            <properties>
-                <xml.files>src/test/resources/CompaniesStCode.xml</xml.files>
+                <xml.files>src/test/resources/Tests.xml</xml.files>
             </properties>
         </profile>
     </profiles>
