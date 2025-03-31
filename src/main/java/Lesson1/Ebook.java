@@ -4,7 +4,7 @@ public class Ebook extends Book {
 
     public double fileSizeMB;
 
-//Підклас PrintedBook викликає конструктор super(title, author) абстрактного класу Book, щоб ініціалізувати поля title та author.
+//Підклас PrintedBook викликає конструктор super(title, author) абстрактного класу BookStore, щоб ініціалізувати поля title та author.
 //Це дозволяє уникнути дублювання коду для ініціалізації спільних полів у кожному підкласі.
     public Ebook(String title, String author, double fileSizeMB) {
         //super використовується для виклику конструктора або методу батьківського класу в підкласі.

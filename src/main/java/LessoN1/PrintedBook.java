@@ -15,7 +15,7 @@ public class PrintedBook implements Book {
 
     @Override
     public void displayInfo() {
-        System.out.println("📖 Printed Book: " + title + " by " + author + ", " + pages + " pages.");
+        System.out.println("📖 Printed BookStore: " + title + " by " + author + ", " + pages + " pages.");
     }
 
     @Override

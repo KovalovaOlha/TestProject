@@ -14,12 +14,12 @@ import static org.testng.AssertJUnit.*;
 public class BookTests {
 
     //Поліморфізм у цьому тесті проявляється в тому, що всі три об'єкти
-    // (PrintedBook, Ebook, AudioBook) оголошені через спільний тип Book, але поводяться по-різному.
+    // (PrintedBook, Ebook, AudioBook) оголошені через спільний тип BookStore, але поводяться по-різному.
 
         @Test
         void testPolymorphism() {
-            //book1, book2 та book3 оголошені як тип Book (інтерфейс)
-            // Поліморфізм дозволяє нам обробляти їх однаково через Book, не звертаючись до конкретних реалізацій..
+            //book1, book2 та book3 оголошені як тип BookStore (інтерфейс)
+            // Поліморфізм дозволяє нам обробляти їх однаково через BookStore, не звертаючись до конкретних реалізацій..
             LessoN1.Book book1 = new LessoN1.PrintedBook("Java Programming", "John Doe", 500);
             LessoN1.Book book2 = new Ebook("Clean Code", "Robert C. Martin", 3.2);
             LessoN1.Book book3 = new AudioBook("The Pragmatic Programmer", "Andy Hunt", 12.5);
@@ -28,8 +28,8 @@ public class BookTests {
             assertTrue(book2 instanceof LessoN1.Book);
             assertTrue(book3 instanceof Book);
             //book1, book2, book3 — це змінні, які представляють об'єкти різних класів, вони створюються за допомогою конструкторів класів:
-            //Якщо тест проходить успішно → означає, що усі підкласи PrintedBook, Ebook і AudioBook успадковують Book і підтримують поліморфізм.
-            //instanceof перевіряє, що всі три об'єкти справді є екземплярами Book.
+            //Якщо тест проходить успішно → означає, що усі підкласи PrintedBook, Ebook і AudioBook успадковують BookStore і підтримують поліморфізм.
+            //instanceof перевіряє, що всі три об'єкти справді є екземплярами BookStore.
         }
 
     @Test

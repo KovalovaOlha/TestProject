@@ -9,7 +9,7 @@ public abstract class Book {
     public String title;
     public String author;
     //Цей конструктор:
-    //Ініціалізує поля title і author у абстрактному класі Book.
+    //Ініціалізує поля title і author у абстрактному класі BookStore.
     public Book(String title, String author) {
         this.title = title;
         this.author = author;

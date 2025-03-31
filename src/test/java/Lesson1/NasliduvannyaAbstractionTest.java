@@ -20,14 +20,14 @@ public class NasliduvannyaAbstractionTest {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
 
-        // Викликаємо метод displayInfo() який є у абстрактному класу Book та перевіряємо чи правильно виводиться інформація
+        // Викликаємо метод displayInfo() який є у абстрактному класу BookStore та перевіряємо чи правильно виводиться інформація
         printedBook.displayInfo();
 
         // Повертаємо стандартний потік виводу
         System.setOut(System.out);
 
         // Перевіряємо, чи виведена правильна інформація
-        String expectedOutput = "📖 Printed Book: The Art of Computer Programming by Donald Knuth, 700 pages.";
+        String expectedOutput = "📖 Printed BookStore: The Art of Computer Programming by Donald Knuth, 700 pages.";
         assertEquals(expectedOutput, outputStream.toString().trim());
     }
     @Test
@@ -37,8 +37,8 @@ public class NasliduvannyaAbstractionTest {
         Book audioBook = new AudioBook("The Pragmatic Programmer", "Andy Hunt", 10.5);
         Book ebook = new Ebook("Design Patterns", "Erich Gamma", 4.0);
 
-        // Перевіряємо, чи є вони підтипами класу Book
-        //instanceof перевіряє, що всі три об'єкти справді є екземплярами Book.
+        // Перевіряємо, чи є вони підтипами класу BookStore
+        //instanceof перевіряє, що всі три об'єкти справді є екземплярами BookStore.
         assertTrue(printedBook instanceof Book);
         assertTrue(audioBook instanceof Book);
         assertTrue(ebook instanceof Book);
